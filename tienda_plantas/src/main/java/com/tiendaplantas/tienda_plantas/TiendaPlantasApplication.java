@@ -19,7 +19,7 @@ public class TiendaPlantasApplication {
 		Statement stat = null;
 		PreparedStatement prepStat = null;
 		Scanner scan = new Scanner(System.in);
-		
+
 		try {
 			stat = conexion.createStatement();
 		} catch (Exception e) {
@@ -29,7 +29,8 @@ public class TiendaPlantasApplication {
 		boolean validar = false;
 		while (!validar) {
 			System.out.println();
-			System.out.println("1-Ver Articulos\n2-Modificar articulo\n3-Insertar articulo\n4-Eliminar Articulo\n0-Salir");
+			System.out.println(
+					"1-Ver Articulos\n2-Modificar articulo\n3-Insertar articulo\n4-Eliminar Articulo\n0-Salir");
 			System.out.println("-------------------------------------------------------");
 			System.out.print("¿Que quieres hacer? ");
 			opcion = Metodos.validarInt(scan);
@@ -40,13 +41,13 @@ public class TiendaPlantasApplication {
 					CRUD.ReadTodo(stat);
 					break;
 				case 2:
-				CRUD.Update(conexion, scan);
+					CRUD.Update(conexion, scan);
 					break;
 				case 3:
-				CRUD.Insert(scan,conexion);
+					CRUD.Insert(scan, conexion);
 					break;
 				case 4:
-				CRUD.Delete(scan, conexion);
+					CRUD.Delete(scan, conexion);
 					break;
 				case 0:
 					validar = true;
@@ -57,7 +58,6 @@ public class TiendaPlantasApplication {
 					break;
 			}
 		}
-		
 
 	}
 

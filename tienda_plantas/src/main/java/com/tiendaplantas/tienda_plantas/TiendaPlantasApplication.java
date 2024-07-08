@@ -17,7 +17,7 @@ public class TiendaPlantasApplication {
 		System.out.println("Bienvenido a la tienda de plantas!");
 		Connection conexion = ConexionDB.CreateDB();
 		Statement stat = null;
-		PreparedStatement prepStat = null;
+		// PreparedStatement prepStat = null;
 		Scanner scan = new Scanner(System.in);
 
 		try {
